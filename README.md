@@ -19,5 +19,6 @@ Landing page feita em React.
 - faça o clone do projeto
 - entre na pasta e crie um arquivo chamado .env e preencha os dados como .env-sample
 - instale as dependencias com o comando npm install
+- faça o download das configurações com npm run download
 - rode o projeto com npm start
 - ele deverá abrir o browser em http://localhost:3000

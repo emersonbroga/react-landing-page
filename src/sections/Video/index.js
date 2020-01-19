@@ -2,7 +2,7 @@ import React from "react";
 
 import { getPublicUrl } from "helpers/EnvHelper";
 
-const Video = ({ videoId }) => {
+const Video = () => {
   const style = { backgroundImage: `url(${getPublicUrl()}/images/random-bg.png)` };
   return (
     <div className="section video" style={style}>
@@ -11,7 +11,7 @@ const Video = ({ videoId }) => {
           Lorem ipsum consectetur <em>adipiscing elit.</em>
         </h1>
         <div className="video">
-          <iframe src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" title="video" />
+          <iframe src="https://www.youtube.com/embed/lepYkDZ62OY" frameBorder="0" title="video" />
         </div>
       </div>
     </div>

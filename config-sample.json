@@ -1,0 +1,22 @@
+{
+  "sections": [
+    {
+      "type": "video"
+    },
+    {
+      "type": "form"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "cta"
+    },
+    {
+      "type": "about"
+    },
+    {
+      "type": "footer"
+    }
+  ]
+}
