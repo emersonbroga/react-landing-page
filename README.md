@@ -4,7 +4,7 @@ Landing page feita em React.
 
 [EmersonBroga.com](https://emersonbroga.com/).
 
-[![Emerson Broga React Landing Page](https://github.com/emersonbroga/react-landing-page/blob/master/screenthot.jpg?raw=true)](https://emersonbroga.com/)
+[![Emerson Broga React Landing Page](https://github.com/emersonbroga/react-landing-page/blob/master/screenshot.jpg?raw=true)](https://emersonbroga.com/)
 
 #### Se ainda não segue, conheça as nossas Redes Sociais
 
