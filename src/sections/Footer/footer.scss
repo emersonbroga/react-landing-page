@@ -1,0 +1,57 @@
+.section {
+  &.footer {
+    background: $colorDark;
+    color: $colorLight;
+    a {
+      color: $colorLight;
+    }
+    .container {
+      position: relative;
+      top: 0;
+
+      .footer-logo {
+        opacity: 0.5;
+        display: block;
+        margin-bottom: 20px;
+        img {
+          max-width: 100%;
+        }
+      }
+      .copyright-title {
+        clear: both;
+        display: block;
+        margin-bottom: 10px;
+        opacity: 0.3;
+      }
+      .copyright {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .section {
+    &.footer {
+      .container {
+        display: flex;
+        flex-direction: unset;
+        .footer-logo {
+          width: 210px;
+          margin: 0 30px 0 0;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 60px;
+            left: 224px;
+            background-color: #e7e7e7;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

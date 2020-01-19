@@ -1,0 +1,46 @@
+/* From node_modules/bootstrap/scss/_variables.scss */
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+/* /From node_modules/bootstrap/scss/_variables.scss */
+
+/* From bootstrap/scss/mixins/_breakpoints.scss */
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+/* /From bootstrap/scss/mixins/_breakpoints.scss */
+
+@include media-breakpoint-up(sm) {
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+}
+@include media-breakpoint-up(xl) {
+}

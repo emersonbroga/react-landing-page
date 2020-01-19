@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+
+import Video from "sections/Video";
+import Form from "sections/Form";
+import Text from "sections/Text";
+import CTA from "sections/CTA";
+import About from "sections/About";
+import Footer from "sections/Footer";
+
+import { init } from "helpers/InitHelper";
+
+import "./styles.scss";
 
 function App() {
+  useEffect(() => {
+    init();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <Video videoId="lepYkDZ62OY" />
+        <Form />
+        <Text />
+        <CTA />
+        <About />
+        <Footer />
+      </div>
+    </>
   );
 }
 

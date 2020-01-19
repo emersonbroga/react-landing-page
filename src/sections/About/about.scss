@@ -1,0 +1,95 @@
+.section {
+  &.about {
+    .container {
+      background: none;
+      .block {
+        width: 100%;
+        background: scale-color($colorLight, $alpha: -12%);
+        margin-top: 60px;
+        width: 100%;
+
+        .role {
+          color: $colorHighlight2;
+          opacity: 0.6;
+          font-weight: bold;
+          position: relative;
+          z-index: -1;
+          text-align: left;
+          font-size: 3rem;
+          top: -4rem;
+          line-height: 2.6rem;
+        }
+        .inner {
+          width: 100%;
+          position: relative;
+          margin: 0 auto;
+          top: -85px;
+          padding-top: 15px;
+
+          h2 {
+            text-align: left;
+          }
+          .info {
+            .photo {
+              img {
+                max-width: 100%;
+                padding: 0 12px;
+                border-bottom: solid 2px black;
+                box-shadow: 0 12px 4px -7px black;
+              }
+            }
+            em {
+              font-weight: bold;
+            }
+            div {
+              align-self: flex-start;
+              p {
+                line-height: 1.6;
+                color: $colorDark;
+                a {
+                  color: $colorHighlight1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section {
+    &.about {
+      margin-top: $sizePadding;
+      .container {
+        max-width: 100%;
+        .block {
+          margin: 0 auto;
+          padding: 0 64px;
+          height: 349px;
+          .role {
+            padding-left: 10%;
+            font-size: 6rem;
+            top: -3.7rem;
+            line-height: 6rem;
+          }
+          .inner {
+            max-width: 1200px;
+            top: -100px;
+            h2 {
+            }
+            .info {
+              display: flex;
+              .photo {
+                margin-top: -126px;
+                img {
+                  max-width: unset;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

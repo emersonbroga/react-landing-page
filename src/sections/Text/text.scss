@@ -1,0 +1,50 @@
+.section {
+  &.text {
+    width: 100%;
+    height: auto;
+    margin: 0;
+
+    position: relative;
+    background: $colorLight;
+    color: $colorDark;
+
+    .container {
+      position: relative;
+      top: 0;
+
+      h2 {
+        text-align: left;
+        margin: 1.2rem 0;
+      }
+
+      .cta {
+        text-align: center;
+        padding: 10px 0;
+        button {
+          font-size: 1.5rem;
+          color: #fff;
+          line-height: 30px;
+          padding: 10px 20px;
+          background: #ffb75e;
+          background: -webkit-linear-gradient(to right, #ed8f03, #ffb75e);
+          background: linear-gradient(to right, #ed8f03, #13110f);
+          box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+          border: 0;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section {
+    &.text {
+      .container {
+        h2 {
+          text-align: left;
+          margin: 1.8rem 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,208 @@
+.section {
+  &.form {
+    padding: 0;
+    background-color: $colorLight;
+    color: $colorDark;
+    .container {
+      padding: 10px 0;
+      position: relative;
+      top: 0;
+      .btn-cta {
+        width: 100%;
+        max-width: calc(100% - 20px);
+        font-weight: bold;
+        background-color: lighten($colorHighlight3, 5%);
+        color: $colorLight;
+        transition: color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3 ease-out;
+        &:hover {
+          background-color: $colorHighlight3;
+          color: $colorLight;
+        }
+      }
+
+      form {
+        text-align: center;
+        .field {
+          padding-bottom: 20px;
+          .grouped-input {
+            display: flex;
+            flex-direction: column; // new
+            justify-content: center;
+            input {
+              width: 100%;
+
+              font-size: 20px;
+              color: $colorHighlight1;
+              box-sizing: border-box;
+              box-shadow: none;
+              padding: 0 10px;
+              margin: 5px 0; // new
+              height: 60px;
+              background: none;
+              font-size: 1.5rem;
+              border: solid 2px $colorHighlight1;
+              border-radius: 8px;
+              &:-internal-autofill-selected {
+                background-color: none !important;
+              }
+
+              &:focus {
+                outline: 0;
+              }
+              &::placeholder {
+                color: $colorHighlight1;
+              }
+
+              &[type="submit"] {
+                font-size: 20px;
+                border-left: none;
+                padding: 0 10px;
+                padding-top: 3px;
+                background-color: $colorHighlight1;
+                color: $colorLight;
+                &:hover {
+                  box-shadow: none;
+                }
+                &:active {
+                  box-shadow: none;
+                }
+              }
+            }
+
+            .loader {
+              width: 60px;
+              height: 60px;
+              position: relative;
+              top: 0;
+              left: calc(50% - 30px);
+              stroke: $colorLight;
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+          .error {
+            color: $colorError;
+            height: 20px;
+            position: relative;
+            top: -60px;
+            display: block;
+          }
+        }
+
+        &.loading {
+          .field {
+            .grouped-input {
+              input {
+                &[type="submit"] {
+                  color: $colorHighlight1;
+                }
+              }
+              .loader {
+                top: -62px;
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        &.error {
+          .field {
+            padding-bottom: 0;
+            .grouped-input {
+              input {
+                border: solid 2px $colorError;
+                color: $colorError;
+                &[type="submit"] {
+                  background-color: $colorError;
+                  color: #fff;
+                }
+                &::placeholder {
+                  color: $colorError;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      h2 {
+        padding: 8px;
+        border-radius: 8px;
+        &.success {
+          color: $colorSuccess;
+          border: solid 2px $colorSuccess;
+        }
+        &.error {
+          color: $colorError;
+          border: solid 2px $colorError;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .section {
+    &.form {
+      .container {
+        .btn-cta {
+          margin-left: calc(50% - 300px);
+          width: 600px;
+        }
+
+        form {
+          .field {
+            .grouped-input {
+              flex-direction: row;
+              input {
+                border-right: none;
+                border-radius: 8px 0 0 8px;
+                width: calc(50% - 140px);
+                &[type="submit"] {
+                  width: 140px;
+                  border-radius: 0 8px 8px 0;
+                  border-left: none;
+                }
+              }
+
+              .loader {
+                top: 8px;
+                left: 0;
+              }
+            }
+            .error {
+              position: unset;
+              top: -60px;
+            }
+          }
+
+          &.loading {
+            .field {
+              .grouped-input {
+                input {
+                  border-right: none;
+                }
+                .loader {
+                  top: 8px;
+                  left: -100px;
+                }
+              }
+            }
+          }
+
+          &.error {
+            .field {
+              .grouped-input {
+                input {
+                  &[type="submit"] {
+                    border-left: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

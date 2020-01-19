@@ -1,0 +1,23 @@
+/* color pallet */
+
+// https://coolors.co/1a535c-00d9de-f7fff7-ff6b6b-f58829
+$color1: #1a535c;
+$color2: #00d9de;
+$color3: #f7fff7;
+$color4: #ff6b6b;
+$color5: #f58829;
+
+/* colors */
+$colorLight: $color3;
+$colorDark: $color1;
+
+$colorHighlight1: $color2;
+$colorHighlight2: $color4;
+$colorHighlight3: $color5;
+
+$colorError: $color4;
+$colorSuccess: $color2;
+
+/* sizes */
+$sizeContainer: 1200px;
+$sizePadding: 60px;

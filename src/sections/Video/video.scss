@@ -1,0 +1,52 @@
+.section {
+  &.video {
+    width: 100%;
+    background-repeat: repeat;
+    background-color: $colorHighlight1;
+    background-position: 20px;
+    color: $colorLight;
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      top: 0;
+      h1 {
+        width: calc(100% - 20px);
+        line-height: 1;
+        margin: 0 auto;
+        em {
+          color: $colorDark;
+        }
+      }
+
+      .video {
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+        background: #1e1e1e;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .section {
+    &.video {
+      .container {
+        width: 780px;
+        h1 {
+          width: 100%;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
